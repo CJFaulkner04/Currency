@@ -15,7 +15,7 @@ const target = document.getElementById("target-currency");
 
 
 
-const list = () => {
+const dropBox = () => {
   fetch(`https://api.apilayer.com/exchangerates_data/latest`, requestOptions)
     .then(response => response.text())
     .then(results => {
@@ -50,7 +50,7 @@ const convert = (base, target, amount) => {
     });
 };
 
-list();
+dropBox();
 
 convertButton.addEventListener("click", e => {
   e.preventDefault();
